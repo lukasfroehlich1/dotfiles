@@ -1,11 +1,53 @@
-execute pathogen#infect()
+set nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'valloric/youcompleteme'
+Plugin 'bitc/vim-hdevtools'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+Plugin 'tpope/vim-obsession'
+
+" Plugin 'vim-airline/vim-airline'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin on    " required
+
+
+filetype plugin on 
+
 
 "Set leader key to space
 let mapleader = " "
 
+"spell check
+set sps=best,9
+nnoremap <leader>sp :set spell! <CR>
+set spelllang=en_us
+
 "map jk to escape
 imap jk <Esc>
 imap kj <Esc>
+imap :w <Esc>
+
+"nerd tree
+map <C-n> :NERDTreeToggle<CR>
 
 "make Y more consistant
 nnoremap Y y$
@@ -28,7 +70,10 @@ nnoremap <leader>r :redraw!<CR>
 
 set relativenumber
 
-autocmd FileType python nnoremap <buffer> <C-B> :exec '!python3' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <C-B> :exec '!python' shellescape(@%, 1)<cr>
+autocmd FileType python map <C-M> :w <CR> :!kernprof -lv %<CR>
+
+autocmd FileType matlab nnoremap <buffer> <C-B> :exec '!octave' shellescape(@%, 1)<cr>
 
 autocmd FileType lua nnoremap <buffer> <C-B> :exec '!lua' shellescape(@%, 1)<cr>
 
@@ -56,20 +101,26 @@ autocmd FileType sh map <C-B> :w <CR> :!./%<CR>
 
 autocmd FileType javascript map <C-B> :w <CR> :!node %<CR>
 autocmd FileType javascript map <C-M> :w <CR> :!mocha<CR>
-"let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
+"let g:syntastic_javascript_checkers = ['jshint']
 
 " typescript jazz
-
 autocmd FileType typescript map <C-B> :w <CR> :make<CR>
 autocmd FileType typescript map <C-M> :w <CR> :!npm test<CR>
 nnoremap <C-C> :w <CR> :SyntasticCheck<CR>
 let g:syntastic_typescript_checkers = ['tslint']
 
+" haskell fun
+autocmd FileType haskell map <C-B> :w <CR> :!stack ghc % && ./%<<CR>
+au FileType haskell nnoremap <leader>t :HdevtoolsType<CR>
+au FileType haskell nnoremap <silent> <leader>c :HdevtoolsClear<CR>
+
+
 "for react
 
 let g:syntastic_mode_map={ 'mode': 'active',
                      \ 'active_filetypes': [],
-                     \ 'passive_filetypes': ['html', 'jsx'] }
+                     \ 'passive_filetypes': ['html'] }
 
 
 " youcompleteme bindings
@@ -91,16 +142,21 @@ colorscheme monokai
 set hidden
 set history=100
 
-set nocp 
-filetype plugin on 
 
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
 
-"to make airline show up
+
+" Setting spacing for types
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+
+
+"airline fix
 set laststatus=2
+
 
 "backspace fix
 set backspace=indent,eol,start
