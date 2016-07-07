@@ -1,1 +1,0 @@
-mpage.vba: call delete('/Users/lfroehlich/.vim/plugin/mpage.vim')|call delete('/Users/lfroehlich/.vim/plugin/cecutil.vim')|call delete('/Users/lfroehlich/.vim/doc/mpage.txt')

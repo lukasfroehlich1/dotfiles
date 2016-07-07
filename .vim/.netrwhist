@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/private/var/folders/qr/gw3zqsbn2cj01lyd89f9jgtc0000gr/T'
-let g:netrw_dirhist_2='/Users/lfroehlich/School/9 Spring 2016/329 CPE/CPE329/Assignment 5 - v5'
-let g:netrw_dirhist_3='/Users/lfroehlich/Developer/react-15.1.0/examples/basic-jsx-external'
-let g:netrw_dirhist_4='/Users/lfroehlich/Developer/react-15.1.0/examples/basic-tutorial-project/node_modules'
-let g:netrw_dirhist_5='/Users/lfroehlich/School/9 Spring 2016/329 CPE/CPE329'
-let g:netrw_dirhist_6='/Users/lfroehlich/Developer/react-basics/react-js-tutorials/1-basic-react/src/js/components/Header'
