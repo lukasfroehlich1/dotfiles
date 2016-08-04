@@ -70,7 +70,7 @@ nnoremap <leader>r :redraw!<CR>
 
 set relativenumber
 
-autocmd FileType python nnoremap <buffer> <C-B> :exec '!python' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <C-B> :exec '!python3' shellescape(@%, 1)<cr>
 autocmd FileType python map <C-M> :w <CR> :!kernprof -lv %<CR>
 
 autocmd FileType matlab nnoremap <buffer> <C-B> :exec '!octave' shellescape(@%, 1)<cr>
@@ -147,7 +147,6 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
-
 
 " Setting spacing for types
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
