@@ -71,7 +71,7 @@ nnoremap <leader>r :redraw!<CR>
 
 set relativenumber
 
-autocmd FileType python nnoremap <buffer> <C-B> :exec '!python3' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> <C-B> :exec '!python2' shellescape(@%, 1)<cr>
 autocmd FileType python map <C-M> :w <CR> :!kernprof -lv %<CR>
 
 autocmd FileType matlab nnoremap <buffer> <C-B> :exec '!octave' shellescape(@%, 1)<cr>
@@ -142,6 +142,10 @@ colorscheme monokai
 
 set hidden
 set history=100
+
+
+" fixing pasting
+map <Leader>p :set paste<CR>o<esc>"*p:set nopaste<cr>
 
 
 filetype plugin indent on
