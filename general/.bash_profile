@@ -30,3 +30,6 @@ test -f ~/.git-completion.bash && . $_
 
 alias ack='ack --pager="less -FRSX"'
 # alias ack='ACK_PAGER_COLOR="less -x4SRFX" /usr/bin/ack-grep -a'
+
+# added by Anaconda3 4.1.1 installer
+export PATH="//anaconda/bin:$PATH"

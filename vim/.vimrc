@@ -50,6 +50,10 @@ imap :w <Esc>
 "nerd tree
 map <C-n> :NERDTreeToggle<CR>
 
+"youcompleteme auto close scratch
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
 "make Y more consistant
 nnoremap Y y$
 
@@ -72,7 +76,8 @@ nnoremap <leader>r :redraw!<CR>
 set relativenumber
 
 autocmd FileType python nnoremap <buffer> <C-B> :exec '!python3' shellescape(@%, 1)<cr>
-autocmd FileType python map <C-M> :w <CR> :!kernprof -lv %<CR>
+" old profiling code
+"autocmd FileType python map <C-,> :w <CR> :!kernprof -lv %<CR>
 
 autocmd FileType matlab nnoremap <buffer> <C-B> :exec '!octave' shellescape(@%, 1)<cr>
 
@@ -101,13 +106,13 @@ autocmd FileType c map <C-B> :call BuildCheck()<CR>
 autocmd FileType sh map <C-B> :w <CR> :!./%<CR>
 
 autocmd FileType javascript map <C-B> :w <CR> :!node %<CR>
-autocmd FileType javascript map <C-M> :w <CR> :!mocha<CR>
+"autocmd FileType javascript map <C-,> :w <CR> :!mocha<CR>
 let g:syntastic_javascript_checkers = ['eslint']
 "let g:syntastic_javascript_checkers = ['jshint']
 
 " typescript jazz
 autocmd FileType typescript map <C-B> :w <CR> :make<CR>
-autocmd FileType typescript map <C-M> :w <CR> :!npm test<CR>
+"autocmd FileType typescript map <C-,> :w <CR> :!npm test<CR>
 nnoremap <C-C> :w <CR> :SyntasticCheck<CR>
 let g:syntastic_typescript_checkers = ['tslint']
 

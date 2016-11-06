@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Mechanical Keyboard Changes</name>
+    <appendix>* f2: Brightness control.</appendix>
+    <appendix>* f6...f8: Music control.</appendix>
+    <appendix>* f9...f11: Volume control.</appendix>
+    <identifier>remap.pc_keyboard_function_lukas</identifier>
+
+    <!-- We use KeyCode::VK_IOHIDPOSTEVENT in order to control both internal and external display brightness. -->
+    <autogen>__KeyToKey__ KeyCode::F2, KeyCode::MISSION_CONTROL</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::F6, ConsumerKeyCode::MUSIC_PREV</autogen>
+    <autogen>__KeyToKey__ KeyCode::F7, ConsumerKeyCode::MUSIC_PLAY</autogen>
+    <autogen>__KeyToKey__ KeyCode::F8, ConsumerKeyCode::MUSIC_NEXT</autogen>
+
+    <autogen>__KeyToKey__ KeyCode::F9, ConsumerKeyCode::VOLUME_MUTE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F10, ConsumerKeyCode::VOLUME_DOWN</autogen>
+    <autogen>__KeyToKey__ KeyCode::F11, ConsumerKeyCode::VOLUME_UP</autogen>
+  </item>
+
+</root>
