@@ -11,13 +11,17 @@ alias t='task'
 alias ..='cd ..'
 alias ghci='stack ghci'
 
-PS1="\W $ "
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+} 
+
+PS1="\W\$(parse_git_branch) $ "
 
 export CLICOLOR=1
 #export LSCOLORS=exgxcxdxcxegedabagacad
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
-export PATH=$PATH:.:~/.local/bin 
+export PATH=$PATH:.:~/.local/bin:~/Developer/arcanist/bin 
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 
 # Add GHC 7.10.3 to the PATH, via https://ghcformacosx.github.io/

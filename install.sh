@@ -12,6 +12,7 @@ ln -sfv "$DOTFILES_DIR/general/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/general/.slate.js" ~
 ln -sfv "$DOTFILES_DIR/general/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
+ln -sfv "$DOTFILES_DIR/vim/.ycm_extra_conf" ~
 
 # adding monokai coloring
 mkdir -p ~/.vim/colors

@@ -20,7 +20,7 @@ Plugin 'bitc/vim-hdevtools'
 Plugin 'mxw/vim-jsx'
 
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'plasticboy/vim-markdown'
 
 Plugin 'tpope/vim-obsession'
 
@@ -53,6 +53,7 @@ map <C-n> :NERDTreeToggle<CR>
 "youcompleteme auto close scratch
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_global_ycm_extra_conf = '/Users/lfroehlich/.ycm_extra_conf.py'
 
 "make Y more consistant
 nnoremap Y y$
@@ -86,15 +87,7 @@ autocmd FileType lua nnoremap <buffer> <C-B> :exec '!lua' shellescape(@%, 1)<cr>
 function! BuildCheck()
    if filereadable("Makefile")
        w
-       silent make clean
-       silent make
-       if filereadable("Runfile")
-           execute "!" . readfile("Runfile")[0]
-       else
-           echo "No Runfile found"
-           !./_%<
-       endif
-
+       make
    else
        w
        !gcc % -o _%< && ./_%<
@@ -102,6 +95,9 @@ function! BuildCheck()
 endfunction
 
 autocmd FileType c map <C-B> :call BuildCheck()<CR>
+
+" For local replace
+nnoremap gr gd[{V%::s/<C-R>///g<left><left>
 
 autocmd FileType sh map <C-B> :w <CR> :!./%<CR>
 
@@ -169,6 +165,16 @@ set laststatus=2
 
 "backspace fix
 set backspace=indent,eol,start
+
+
+"eslint fix
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+if matchstr(local_eslint, "^\/\\w") == ''
+    let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+    let g:syntastic_javascript_eslint_exec = local_eslint
+endif
 
 "Syntastic settings
 "Following three add status line 
