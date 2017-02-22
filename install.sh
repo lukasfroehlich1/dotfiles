@@ -12,8 +12,15 @@ ln -sfv "$DOTFILES_DIR/general/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/general/.slate.js" ~
 ln -sfv "$DOTFILES_DIR/general/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
-ln -sfv "$DOTFILES_DIR/vim/.ycm_extra_conf" ~
+ln -sfv "$DOTFILES_DIR/vim/.ycm_extra_conf.py" ~
 
 # adding monokai coloring
 mkdir -p ~/.vim/colors
 ln -sfv "$DOTFILES_DIR/vim/monokai.vim" ~/.vim/colors
+
+# setting up vim files
+ln -sfv "$DOTFILES_DIR/vim/ftplugin/" ~/.vim/ftplugin
+ln -sfv "$DOTFILES_DIR/vim/runcom/" ~/.vim/runcom
+
+# installing vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim

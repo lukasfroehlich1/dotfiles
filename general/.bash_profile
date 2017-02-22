@@ -10,6 +10,7 @@ alias sqlpi='mysql -u cera -p -h playground.ro.lt'
 alias t='task'
 alias ..='cd ..'
 alias ghci='stack ghci'
+alias pip='pip3'
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -30,10 +31,13 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
-test -f ~/.git-completion.bash && . $_
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 alias ack='ack --pager="less -FRSX"'
 # alias ack='ACK_PAGER_COLOR="less -x4SRFX" /usr/bin/ack-grep -a'
 
 # added by Anaconda3 4.1.1 installer
 export PATH="//anaconda/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
