@@ -1,1 +1,1 @@
-map <C-B> :w <CR> :!./%<CR>
+nnoremap <C-B> :w <CR> :!./%<CR>

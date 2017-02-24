@@ -1,11 +1,6 @@
 "nerd tree
 map <C-n> :NERDTreeToggle<CR>
 
-"youcompleteme auto close scratch
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_global_ycm_extra_conf = '/Users/lfroehlich/.ycm_extra_conf.py'
-
 "specify eslint
 let g:syntastic_javascript_checkers = ['eslint']
 
@@ -23,7 +18,29 @@ if executable(local_eslint)
     let g:syntastic_javascript_eslint_exec = local_eslint
 endif
 
-"not sure what this is. probs not needed
+"not sure what this is.
 let g:syntastic_auto_jump = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+"tab complete
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" limit list to 5
+let g:neocomplete#max_list = 5
+
+" autocomplete for things
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete

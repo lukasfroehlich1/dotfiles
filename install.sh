@@ -17,6 +17,11 @@ ln -sfv "$DOTFILES_DIR/vim/.ycm_extra_conf.py" ~
 mkdir -p ~/.vim/colors
 ln -sfv "$DOTFILES_DIR/vim/monokai.vim" ~/.vim/colors
 
+
+# remove any existing sym links
+rm ~/.vim/ftplugin >& /dev/null
+rm ~/.vim/runcom >& /dev/null
+
 # setting up vim files
 ln -sfv "$DOTFILES_DIR/vim/ftplugin/" ~/.vim/ftplugin
 ln -sfv "$DOTFILES_DIR/vim/runcom/" ~/.vim/runcom

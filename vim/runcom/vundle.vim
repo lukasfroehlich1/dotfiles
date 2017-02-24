@@ -14,10 +14,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-commentary'
-Plugin 'valloric/youcompleteme'
 Plugin 'mxw/vim-jsx'
-
-Plugin 'godlygeek/tabular'
+Plugin 'shougo/neocomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

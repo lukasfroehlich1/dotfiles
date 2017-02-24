@@ -13,7 +13,7 @@ function! BuildCheck()
    endif
 endfunction
 
-map <C-B> :call BuildCheck()<CR>
+nnoremap <C-B> :call BuildCheck()<CR>
 
 " sets tab width for c to 3
 setlocal tabstop=3
