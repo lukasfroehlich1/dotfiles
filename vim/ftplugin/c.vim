@@ -1,8 +1,8 @@
 function! BuildCheck()
    w
    if filereadable("Makefile")
-       silent make clean
-       silent make
+       silent make! clean
+       silent make!
    else
        !gcc % -o _%<
    endif 

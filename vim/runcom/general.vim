@@ -61,4 +61,3 @@ function OpenFiletype()
 endfunction
 
 nnoremap <Leader>f :call OpenFiletype()<CR>
-

@@ -2,6 +2,7 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 alias vim='/usr/local/bin/vim'
+alias vi='/usr/local/bin/vim'
 alias sshfs='/usr/local/my/sshfs'
 alias python='/usr/local/bin/python3'
 alias pip='/usr/local/bin/pip3'
