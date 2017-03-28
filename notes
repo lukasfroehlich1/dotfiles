@@ -1,7 +1,2 @@
-karabiner:
-    delay until repeat 200 milli
-    key repeat 30 milli
-    Application Support/Karabiner/private.xml
-
 alfred: 
     theme = tiny by maciej skrzypczak

@@ -31,3 +31,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # install all listed plugins
 vim -c VundleUpdate -c quitall
+
+# install brew stuff
+source ./brew.sh
+
+# setup mac os 
+source ./macos.sh
