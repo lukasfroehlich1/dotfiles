@@ -16,9 +16,6 @@ brew upgrade
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-
-# Install some other useful utilities like `sponge`.
-brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
 
@@ -50,7 +47,6 @@ brew install homebrew/dupes/grep
 brew install ack
 brew install git
 brew install python3
-
 brew install node
 
 
@@ -60,6 +56,8 @@ brew cask install slate
 brew cask install beardedspice
 brew cask install google-chrome
 brew cask install spotify
+brew cask install alfred
+brew cask install flux
 
 
 # Remove outdated versions from the cellar.
@@ -68,4 +66,5 @@ brew cleanup
 
 # open apps meant to stay open
 open /Applications/Slate.app
+open /Applications/Flux.app
 open /Applications/BeardedSpice.app

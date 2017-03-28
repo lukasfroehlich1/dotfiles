@@ -18,9 +18,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
-# install xcode stuff
-xcode-select --install
-
 #setup git
 git config --global user.name "lukasfroehlich1"
 git config --global user.email "lukasfroehlich1@gmail.com"
