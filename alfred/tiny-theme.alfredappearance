@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 4,
+      "subtext" : {
+        "size" : 11,
+        "colorSelected" : "#515151FF",
+        "font" : "Lucida Grande",
+        "color" : "#515151FF"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#A9A9A9FF",
+        "font" : "Lucida Grande",
+        "color" : "#919191FF"
+      },
+      "backgroundSelected" : "#FFFFFF99",
+      "text" : {
+        "size" : 13,
+        "colorSelected" : "#191919FF",
+        "font" : "Lucida Grande",
+        "color" : "#515151FF"
+      },
+      "iconPaddingHorizontal" : 5,
+      "paddingVertical" : 2,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 0,
+      "background" : "#D1D1D100",
+      "spacing" : 10,
+      "text" : {
+        "size" : 32,
+        "colorSelected" : "#000000FF",
+        "font" : "Lucida Grande",
+        "color" : "#222222FF"
+      },
+      "backgroundSelected" : "#B2D7FFFF"
+    },
+    "window" : {
+      "color" : "#FFFFFFF2",
+      "paddingHorizontal" : 4,
+      "width" : 560,
+      "borderPadding" : 10,
+      "borderColor" : "#19191900",
+      "blur" : 0,
+      "roundness" : 0,
+      "paddingVertical" : 10
+    },
+    "credit" : "Maciej Skrzypczak",
+    "separator" : {
+      "color" : "#FFFFFF00",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#D4D4D4FF",
+      "thickness" : 2
+    },
+    "name" : "tiny (v2)"
+  }
+}
