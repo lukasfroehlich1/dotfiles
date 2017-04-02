@@ -48,6 +48,7 @@ brew install ack
 brew install git
 brew install python3
 brew install node
+brew install yarn
 
 
 # Install cask apps
