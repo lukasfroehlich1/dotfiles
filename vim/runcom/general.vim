@@ -61,3 +61,6 @@ function OpenFiletype()
 endfunction
 
 nnoremap <Leader>f :call OpenFiletype()<CR>
+
+" detect mini files for CPE 431
+au BufNewFile,BufRead *.mini set filetype=mini

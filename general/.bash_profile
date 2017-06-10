@@ -39,6 +39,5 @@ fi
 alias ack='ack --pager="less -FRSX"'
 # alias ack='ACK_PAGER_COLOR="less -x4SRFX" /usr/bin/ack-grep -a'
 
-# added by Anaconda3 4.1.1 installer
-export PATH="//anaconda/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+# iterm added
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

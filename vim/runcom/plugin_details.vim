@@ -18,6 +18,15 @@ if executable(local_eslint)
     let g:syntastic_javascript_eslint_exec = local_eslint
 endif
 
+
+"python pep8
+" let g:syntastic_python_checkers = ['python', 'flake8', 'pyflakes', 'pycodestyle']
+let g:syntastic_python_checkers = ['python', 'flake8', 'pyflakes']
+
+"haskell linting
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+
+
 "not sure what this is.
 let g:syntastic_auto_jump = 0
 let g:syntastic_check_on_open = 1

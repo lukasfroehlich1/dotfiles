@@ -12,10 +12,16 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
+Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-commentary'
-Plugin 'mxw/vim-jsx'
 Plugin 'shougo/neocomplete.vim'
+Plugin 'Shougo/vimproc.vim'
+
+" haskell
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'Twinside/vim-hoogle'
+Plugin 'itchyny/vim-haskell-indent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
