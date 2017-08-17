@@ -24,7 +24,7 @@ endif
 let g:syntastic_python_checkers = ['python', 'flake8', 'pyflakes']
 
 "haskell linting
-autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+" autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 
 
 "not sure what this is.

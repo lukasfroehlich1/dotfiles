@@ -19,9 +19,9 @@ Plugin 'shougo/neocomplete.vim'
 Plugin 'Shougo/vimproc.vim'
 
 " haskell
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'Twinside/vim-hoogle'
-Plugin 'itchyny/vim-haskell-indent'
+" Plugin 'eagletmt/ghcmod-vim'
+" Plugin 'Twinside/vim-hoogle'
+" Plugin 'itchyny/vim-haskell-indent'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -15,6 +15,7 @@ PS1="\W\$(parse_git_branch) $ "
 
 
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/Users/lfroehlich/.local/bin:$PATH"
 export PATH=$PATH:.
 
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
