@@ -8,10 +8,18 @@ alias ghci='stack ghci'
 alias pip='pip3'
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 } 
 
-PS1="\W\$(parse_git_branch) $ "
+# check if connected over ssh
+
+if [[ -n $SSH_CLIENT ]]; then
+    PS1="@\h"
+else
+    PS1=
+fi
+
+PS1+="\W\$(parse_git_branch) $ "
 
 
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -23,11 +31,11 @@ export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 # Add GHC 7.10.3 to the PATH, via https://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.10.3.app"
 if [ -d "$GHC_DOT_APP" ]; then
-  export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+    export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+    . $(brew --prefix)/etc/bash_completion
 fi
 
 alias ack='ack --pager="less -FRSX"'
