@@ -14,7 +14,7 @@ parse_git_branch() {
 # check if connected over ssh
 
 if [[ -n $SSH_CLIENT ]]; then
-    PS1="@\h"
+    PS1="@\h "
 else
     PS1=
 fi
